@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
-import torch.utils.data import (TensorDataset, SequentialSampler, RandomSampler,
+from torch.utils.data import (TensorDataset, SequentialSampler, RandomSampler,
                                 DataLoader)
 
 from model.model import FFNetwork

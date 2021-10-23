@@ -14,3 +14,11 @@ def load_json_by_line(file):
         for line in f:
             data.append(json.loads(line))
     return data
+
+
+def get_acc(preds, labels):
+    cnt = 0
+    for pred, label in zip(preds, labels):
+        if pred == label:
+            cnt += 1
+    return cnt / len(preds)
