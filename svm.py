@@ -20,3 +20,18 @@ preds = clf.predict(x_test)
 acc = metrics.accuracy_score(preds, y_test)
 
 print('accuracy:', acc)
+
+# Testing
+print('Testing')
+features = utils.load_json_by_line('data/test.json')
+x = [f['repr'] for f in features]
+ids = [f['id'] for f in features]
+
+preds = clf.predict(x)
+
+# Dump
+print('Saving submission')
+with open('submission.txt', 'w') as f:
+    f.write('id,target\n')
+    for i, pred in zip(ids, preds):
+        f.write(f'{i},{pred}\n')
