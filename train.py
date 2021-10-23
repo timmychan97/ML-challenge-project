@@ -4,7 +4,7 @@ import torch.nn.functional as F
 from torch.utils.data import (TensorDataset, SequentialSampler, RandomSampler,
                                 DataLoader)
 
-from model.model import FFNetwork
+from models.model import FFNetwork
 import utils
 
 

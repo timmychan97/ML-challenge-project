@@ -1,5 +1,6 @@
 from sklearn import svm
 from sklearn.model_selection import train_test_split
+from sklearn import metrics
 
 import utils
 
@@ -16,6 +17,6 @@ clf.fit(x_train, y_train)
 
 print('Predicting')
 preds = clf.predict(x_test)
-acc = utils.get_acc(preds, y_test)
+acc = metrics.accuracy_score(preds, y_test)
 
 print('accuracy:', acc)
