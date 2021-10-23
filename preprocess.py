@@ -1,7 +1,5 @@
 import json
 
-import matplotlib.pyplot as plt
-
 import utils
 
 file = 'data/challenge1_train.csv'
